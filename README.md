@@ -4,4 +4,6 @@ This repository contains all the code (and some additional files) from my [Kuber
 
 # 测试过的
 Chapter04.  kubia-replicaset.yaml
+Chapter04.  ssd-monitor-daemonset.yaml
+kubectl get ds（daemonset）
 
