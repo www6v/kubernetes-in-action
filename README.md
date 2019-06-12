@@ -31,6 +31,11 @@ Events:            <none>
 
 ```
 
+```
+[root@10-25-3-55 Chapter05]# curl -6 -g  "172.17.243.253:80"
+You've hit kubia-cjrqd
+```
+
 
 
 
