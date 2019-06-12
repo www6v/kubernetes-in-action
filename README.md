@@ -8,7 +8,7 @@ kubia-replicaset.yaml
 ssd-monitor-daemonset.yaml  
 kubectl get ds（daemonset）
 
-Chapter05
+Chapter05  
 kubia-svc.yaml   一个服务一个端口  
 kubia-svc-named-ports.yaml    一个服务多个端口  
 
