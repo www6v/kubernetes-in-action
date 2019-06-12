@@ -2,15 +2,17 @@
 
 This repository contains all the code (and some additional files) from my [Kubernetes in Action](https://www.manning.com/books/kubernetes-in-action) book.
 
-# 测试过的
+# Tested
 Chapter04  
-kubia-replicaset.yaml  
-ssd-monitor-daemonset.yaml  
+1. kubia-replicaset.yaml  
+2. ssd-monitor-daemonset.yaml
+```
 kubectl get ds（daemonset）
+```
 
 Chapter05  
-kubia-svc.yaml   一个服务一个端口  
-kubia-svc-named-ports.yaml    一个服务多个端口  
+1. kubia-svc.yaml   一个服务一个端口  
+2. kubia-svc-named-ports.yaml    一个服务多个端口  
 ```
 [root@10-25-3-55 Chapter05]# kubectl describe svc kubia
 Name:              kubia
@@ -35,7 +37,17 @@ Events:            <none>
 [root@10-25-3-55 Chapter05]# curl -6 -g  "172.17.243.253:80"
 You've hit kubia-cjrqd
 ```
+3. kubia-svc-loadbalancer.yaml
+```
+[root@10-25-3-55 Chapter05]# kubectl get  svc kubia-loadbalancer
+NAME                 TYPE           CLUSTER-IP      EXTERNAL-IP       PORT(S)        AGE
+kubia-loadbalancer   LoadBalancer   172.17.207.29   120.132.105.235   80:45823/TCP   88s
+```
 
+```
+[root@10-25-3-55 Chapter05]# curl http://120.132.105.235
+You've hit kubia-nx4rs
+```
 
 
 
